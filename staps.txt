@@ -1,0 +1,13 @@
+[1] Setup User Interface  
+    * Form Contain {Id , Full name , Email , Address , Phone , Position , salery , state , Create Employee Btn } ;
+    * Table Contain {Employee Information , Delete Btn , Update Btn , Frazze Btn} ;
+======================================================================================================================
+
+[2] Handle Page 
+    * Validate The Entry                                    // Funciton To Validate The Entry Employee Data
+    * Create Employee After The User Click Create Btn       // handle_create_btn
+    * Setup LocalStorage Info                               // Function To Handle That
+    * Create Employee Element By Dom                        // Function To Create And Append Employee Row in Table
+    * Delete Employee From LocalStorage                     // Funciton To Del Empl
+    * Update Employee's Data In LocalStorage                // Funciton To upd Empl
+    * Frazze Employee's State For While                     // Funciton To Frez Empl

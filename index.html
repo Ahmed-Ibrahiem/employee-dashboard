@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Manager</title>
+    <!-- Css File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+    
+
+    <h1 id="title_page">Staff Manager</h1>
+    <!-- Start Form -->
+    <div id="stf_man_form" >
+        <div class="input_box">
+            <label for="full_name">Full Name</label>
+            <input class="input_data" id="full_name" autocomplete="off" type="text" placeholder="Enter Employee's Full Name">
+        </div>
+        <div class="input_box">
+            <label for="email">Email</label>
+            <input class="input_data" id="email" autocomplete="off" type="email" placeholder="Enter Employee's Email">
+            <span id="email_massage">This email already exists</span>
+        </div>
+        <div class="input_box">
+            <label for="phone">Phone</label>
+            <input class="input_data" id="phone" type="text" inputmode="numeric" pattern="\d{11}" maxlength="11" minlength="11" placeholder="Enter Employee's Phone">
+            <span id="phone_massage">This phone already exists</span>
+            <span id="phone_uncorrect">This phone is not correct</span>
+        </div>
+        <div class="input_box">
+            <label for="address">Address</label>
+            <input class="input_data" autocomplete="off" id="address" type="text" placeholder="Enter Employee's Address">
+        </div>
+        <div class="input_box">
+            <label for="position">Position</label>
+            <input class="input_data" id="position" autocomplete="off" type="text" placeholder="Enter Employee's Position">
+        </div>
+        <div class="input_box">
+            <label for="salery">Salary</label>
+            <input class="input_data" id="salery" type="number" placeholder="Enter Employee's Salery">
+        </div>
+        <div class="input_box status_box">
+            <div class="status">
+                <input id="active" data-status="active" type="radio" name="a">
+                <label for="active">Active</label>
+            </div>
+            <div class="status">
+                <input id="suspended" data-status="suspended" type="radio" name="a" checked>
+                <label for="suspended">Suspended</label>
+            </div>
+        </div>
+        <div class="input_box form_btns">
+            <button id="create_employee" class="">
+                <span>Create Employee</span>
+                <i class="fa-solid fa-user-plus"></i>
+            </button>
+            <button id="update_employee" class="" >
+                <span>Update Employee</span>
+                <i class="fa-solid fa-user-pen"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Start Form -->
+    <!-- Start Table -->
+    <div class="responsive_table">
+        <table>
+            <thead>
+                <td>Id</td>
+                <td>Full Name</td>
+                <td>Email</td>
+                <td>Address</td>
+                <td>Phone</td>
+                <td>Position</td>
+                <td>Salary</td>
+                <td>Status</td>
+                <td>Control Buttons</td>
+            </thead>
+            <tbody>
+                <!-- Js Dom -->
+            </tbody>
+        </table>
+    </div>
+    <!-- End Table -->
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

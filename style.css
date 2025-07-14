@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: 0.3s linear;
+    font-family: 'poppins' , sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom , rgb(0, 99, 221) ,  rgb(166, 0, 195));
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#title_page , #stf_man_form{
+    border-radius: 5px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.21);
+    backdrop-filter: blur(10px);
+    padding: 10px ;
+}
+#title_page{
+    font-size: 23px;
+    font-weight: 600;
+    margin: 10px 0;
+    text-align: center;
+    color: white;
+}
+#stf_man_form{
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 25px;
+}
+.input_box{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input_box > label{
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.input_box > input{
+    padding: 5px 10px ;
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+}
+.input_box > input.not_valid{
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
+}
+.input_box > input::placeholder{
+    color: #ccc;
+}
+.input_box > input[type="number"]::-webkit-inner-spin-button,
+.input_box > input[type="number"]::-webkit-outer-spin-button{
+    appearance: none;
+    margin: 0;
+}
+
+.input_box > span{
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    color: rgb(157, 1, 1);
+    bottom: -23px;
+    left: 0;
+}
+.input_box > span.has_exist{
+    display: block;
+}
+
+.status_box{
+    flex-direction: row;
+    gap: 20px;
+}
+.status_box div{
+    position: relative;
+}
+.status_box div label , 
+.status_box div input{
+    cursor: pointer;
+}
+.status_box div label{
+    margin-left: 20px;
+}
+.status_box div input{
+    appearance: none;
+}
+.status_box div input::before , 
+.status_box div input::after{
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    transition: 0.3s ;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.status_box div input::before{
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    left: 0;
+}
+.status_box div input::after{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid transparent;
+    left: 3px;
+    opacity: 0;
+}
+.status_box div input:checked::after{
+    opacity: 1;
+}
+.status_box div input:checked::before{
+    border: 2px solid white;
+}
+.status_box div input:checked + label{
+    color: white;
+}
+.form_btns{
+    flex-direction: row;
+    gap: 10px;
+}
+.form_btns button{
+    width: 50%;
+    border: none;
+    outline: none;
+    background-color: #ccc;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: no-drop;
+    color: white;
+    font-weight: 600;
+    > span{
+        margin-right: 10px;
+    }
+}
+.form_btns #create_employee.active{
+    background-color: rgb(0, 244, 0);
+    cursor: pointer;
+}
+.form_btns #update_employee.active{
+    background-color: rgb(255, 204, 0);
+    cursor: pointer;
+}
+
+/* End Form */
+/* Start Table Style */
+.responsive_table{
+    width: 90%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 10px;
+}
+
+table{
+    margin: auto;
+    min-width: 1300px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.375);
+    backdrop-filter: blur(10px);
+    border-spacing: 0;
+}
+table thead{
+    background-color: hwb(0 93% 7% / 0.31);
+    backdrop-filter: blur(10px);
+}
+table thead td{
+    font-size: 14px;
+    font-weight: 600;
+}
+table td {
+    padding: 15px 10px;
+}
+table tbody td{
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-wrap-mode: nowrap;
+    font-size: 14px;
+    user-select: none;
+}
+table tbody td:first-child{
+    text-align: center;
+}
+table tbody td:last-child{
+    display: flex;
+    gap: 10px;
+    border-right: 1px solid #ccc;
+}
+table tbody td:last-child button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    perspective: 100px;
+}
+table tbody td:last-child button:hover{
+    scale: 1.1;
+    box-shadow: 0 0 3px white;
+}
+#edit{
+    background-color: orange;
+}
+#delete{
+    background-color: orangered;
+}
+#frazze{
+    background-color: rgb(0, 140, 255);
+}
+/* End Table Style */
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    body{
+        padding: 0 ;
+    }
+    #stf_man_form{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
