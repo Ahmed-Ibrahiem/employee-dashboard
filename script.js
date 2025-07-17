@@ -133,6 +133,8 @@ function reset_input_values() {
   address.value = "";
   position.value = "";
   salary.value = "";
+
+  all_input_field.forEach((input) => input.classList.remove("not_valid"));
 }
 
 // =================================================================================
@@ -231,6 +233,7 @@ function edit_emp_data(id) {
   system_mode = "update";
   // call validate function to active the update button
   validate_inputs();
+  all_input_field.forEach(input => input.classList.add('not_valid'));
 }
 
 // ==================================================================================================================
@@ -277,7 +280,11 @@ function delete_emp_data(id) {
 all_input_field.forEach((input) => {
   input.addEventListener("input", function () {
     validate_inputs();
-
+    if (input.value == "") {
+      input.classList.remove("not_valid");
+    } else {
+      input.classList.add("not_valid");
+    }
     validate_exist_data();
   });
 });
